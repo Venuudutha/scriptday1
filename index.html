@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Task 1: Convert to Uppercase
+function convertToUppercase(prompt) {
+    return prompt.toUpperCase();
+}
+
+// Task 2: Convert to Lowercase
+function convertToLowercase(prompt) {
+    return prompt.toLowerCase();
+}
+
+// Task 3: Reverse a String
+function reverseString(prompt) {
+    return prompt.split('').reverse().join('');
+}
+
+// Task 4: Count the number of vowels in a string
+function countVowels(prompt) {
+    const vowels = "aeiouAEIOU";
+    return prompt.split('').filter(char => vowels.includes(char)).length;
+}
+
+// Example usage
+const userInput = prompt("Enter a string:");
+
+console.log("Uppercase:", convertToUppercase(userInput));
+console.log("Lowercase:", convertToLowercase(userInput));
+console.log("Reversed:", reverseString(userInput));
+console.log("Number of vowels:", countVowels(userInput));
+
+
+
+
+
+// Task 1: Username Validation
+function validateUsername() {
+    const username = prompt("Enter a username (must be 5 to 15 characters long):");
+
+    if (username.length >= 5 && username.length <= 15) {
+        console.log("Username is valid!");
+    } else {
+        console.log("Username is invalid. It must be between 5 and 15 characters long.");
+    }
+}
+
+// Call the function to validate username
+validateUsername();
+
+
+
+// Task 2: Email Formatter
+function formatEmail() {
+    // Prompt the user for their first and last name
+    const firstName = prompt("Enter your first name:");
+    const lastName = prompt("Enter your last name:");
+
+    // Convert names to lowercase and concatenate with a dot
+    const emailPrefix = `${firstName.toLowerCase()}.${lastName.toLowerCase()}`;
+
+    // Add "@gmail.com" to the result
+    const formattedEmail = `${emailPrefix}@gmail.com`;
+
+    // Display the formatted email address
+    console.log("Formatted email:", formattedEmail);
+}
+
+// Call the function to format email
+formatEmail();
+
+
+
+
+
+
+// Task 3: Word Counter
+function countWords() {
+    // Prompt the user to enter a sentence
+    const sentence = prompt("Enter a sentence:");
+
+    // Split the sentence into words using spaces as the delimiter
+    const words = sentence.split(" ");
+
+    // Count the number of words
+    const wordCount = words.length;
+
+    // Display the word count
+    console.log("Word count:", wordCount);
+}
+
+// Call the function to count words
+countWords();
+
+
+// Task 4: Palindrome Checker
+function checkPalindrome() {
+    // Prompt the user to enter a string
+    const inputString = prompt("Enter a string to check if it's a palindrome:");
+
+    // Convert the string to lowercase and remove spaces (if any)
+    const cleanedString = inputString.toLowerCase().replace(/\s/g, "");
+
+    // Reverse the string using split, reverse, and join
+    const reversedString = cleanedString.split("").reverse().join("");
+
+    // Check if the original string matches the reversed string
+    if (cleanedString === reversedString) {
+        console.log("It is a palindrome.");
+    } else {
+        console.log("It is not a palindrome.");
+    }
+}
+
+// Call the function to check for palindrome
+checkPalindrome();
+
+
+
+
+
+       
+    </script>
+</body>
+</html>
